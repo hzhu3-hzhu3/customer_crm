@@ -1,0 +1,8 @@
+<h1>Customers Missing Email</h1>
+
+<%= link_to 'All Customers', root_path %> |
+<%= link_to 'Alphabetized Customers', customers_alphabetized_path %>
+
+<% @customers.each do |customer| %>
+  <%= render customer %>
+<% end %>
