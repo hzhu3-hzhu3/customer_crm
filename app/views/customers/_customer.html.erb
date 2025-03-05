@@ -1,0 +1,12 @@
+<div class="box">
+  <% if customer.image.attached? %>
+    <%= image_tag customer.image, class: "customer-image" %>
+  <% else %>
+    <p>No Image Available</p>
+  <% end %>
+
+  <h2><%= customer.full_name %></h2>
+  <p>Phone: <%= customer.phone_number %></p>
+  <p>Email: <%= customer.email_address.presence || "No Email Provided" %></p>
+  <p>Notes: <%= customer.notes %></p>
+</div>
